@@ -20,30 +20,90 @@ const navItems = [
 - Renders the header section of the application with the title and navigation links.
 */
 function Header() {
+
+  const headerStyle = {
+    width: '100%',
+    borderBottom: '1px solid #002437',
+    backgroundColor: '#05c1ff',
+    padding: '1rem 1.5rem',
+    boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
+  }
+
+  const containerStyle = {
+    maxWidth: '72rem',
+    margin: '0 auto',
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    gap: '0.75rem',
+    textAlign: 'left',
+  }
+
+  const titleStyle = {
+    fontSize: '1.125rem',
+    fontWeight: 700,
+    letterSpacing: '-0.02em',
+    color: '#000000',
+    margin: 0,
+  }
+
+  const separatorStyle = {
+    color: '#000000',
+    fontWeight: 600,
+  }
+
+  const navStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.75rem',
+  }
+
+  /* Link Styles */
+  const linkStyle = {
+    color: '#0000007c',
+    display: 'inline-flex',
+    borderRadius: '9999px',
+    backgroundColor: 'rgb(228, 226, 226)',
+    padding: '0.5rem 1rem',
+    fontSize: '0.875rem',
+    textDecoration: 'none',
+    transition: 'background-color 0.2s ease, color 0.2s ease',
+  }
+
+    /* Active Styles */
+  const activeLinkStyle = {
+    ...linkStyle,
+    color: '#000000',
+    backgroundColor: 'rgb(23, 148, 180)',
+    fontWeight: 600,
+    boxShadow: '0 1px 2px rgba(15, 23, 42, 0.08)',
+  }
+
+  /* Inactive Styles */
+  const inactiveLinkStyle = {
+    ...linkStyle,
+    color: '#0000007c',
+  }
+
   return (
-    <header className="w-full border-b border-gray-200 bg-white px-6 py-4">
-      <div className="max-w-4xl mx-auto flex items-center justify-between">
-
-        <span className="text-xl font-bold tracking-tight text-gray-900">
-          Point Master
-        </span>
-
-        <nav className="flex items-center gap-6">
+    <header style={headerStyle}>
+      <div style={containerStyle}>
+        <span style={titleStyle}>POINT MASTER</span>
+        <span style={separatorStyle}>|</span>
+        <nav style={navStyle}>
           {navItems.map((item) => (
             <NavLink
               key={item.label}
               to={item.path}
-              className={({ isActive }) =>
-                isActive
-                  ? 'text-sm font-medium text-gray-900'
-                  : 'text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors'
+              style={({ isActive }) =>
+                isActive ? activeLinkStyle : inactiveLinkStyle
               }
             >
               {item.label}
             </NavLink>
           ))}
         </nav>
-
       </div>
     </header>
   )
