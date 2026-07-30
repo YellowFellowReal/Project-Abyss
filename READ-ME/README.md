@@ -1,2 +1,3 @@
-# Project-Abyss
-Testing grounds for a new scorekeeper-based application 
+# PROJECT: Abyss
+Scorepedia 
+- Testing grounds for a new scorekeeper-based application 

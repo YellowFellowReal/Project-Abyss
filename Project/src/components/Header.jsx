@@ -89,7 +89,7 @@ function Header() {
   return (
     <header style={headerStyle}>
       <div style={containerStyle}>
-        <span style={titleStyle}>POINT MASTER</span>
+        <span style={titleStyle}>SCOREPEDIA</span>
         <span style={separatorStyle}>|</span>
         <nav style={navStyle}>
           {navItems.map((item) => (

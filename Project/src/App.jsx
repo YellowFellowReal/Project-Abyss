@@ -1,5 +1,5 @@
 /* App.jsx
-  - This is the main component of the Point Master application.
+  - This is the main component of the Scorepedia application.
 */
 
 //Imports
