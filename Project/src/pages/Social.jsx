@@ -1,4 +1,24 @@
-// Social page — find and follow other players
+// #region | FILE: Social.jsx
+//
+// - Social landing page for Scorepedia.
+// - Shows a placeholder message for player connections.
+// - Designed as a simple future feature stub.
+// #endregion
+
+// ==============
+// IMPORTS
+// ==============
+// No external imports required for this page.
+
+// ==============
+// GLOBALS
+// ==============
+// No global constants used in this file.
+
+// ==============
+// FUNCTIONS
+// ==============
+
 function Social() {
   return (
     <div>

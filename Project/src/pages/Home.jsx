@@ -1,4 +1,23 @@
-// Home page — landing screen for Point Master
+// #region | FILE: Home.jsx
+//
+// - Entry landing page for the Scorepedia app.
+// #endregion
+
+
+// ==============
+// IMPORTS
+// ==============
+// No external imports required for this page.
+
+// ==============
+// GLOBALS
+// ==============
+// No global constants used in this file.
+
+// ==============
+// FUNCTIONS
+// ==============
+
 function Home() {
   return (
     <div>

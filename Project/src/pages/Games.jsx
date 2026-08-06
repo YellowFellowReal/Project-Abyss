@@ -1,5 +1,24 @@
-// Games.jsx
-// Displays all games and allows creating new ones
+// #region | FILE: Games.jsx
+//
+// - Game management page for the Scorepedia app.
+// - Shows the game management page layout.
+// - Provides buttons for creating new games and viewing past games.
+// - Presentational component with no state or data fetching.
+// #endregion
+
+// ==============
+// IMPORTS
+// ==============
+// No external imports required for this page.
+
+// ==============
+// GLOBALS
+// ==============
+// No global constants used in this file.
+
+// ==============
+// FUNCTIONS
+// ==============
 
 function Games() {
   return (

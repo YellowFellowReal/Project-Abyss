@@ -1,13 +1,18 @@
-/* Header.jsx
-- Component for the header of the application, including navigation links and branding.
-*/
+// #region | FILE: Header.jsx
+//
+// - Top header component for Scorepedia.
+// - Provides the app title and horizontal navigation links.
+// - Uses a comment style similar to Settings.jsx.
+// #endregion
 
-// Imports
+// ==============
+// IMPORTS
+// ==============
 import { NavLink } from 'react-router-dom'
 
-/* Variables
-- navItems: An array of strings representing the navigation items to be displayed in the header.
-*/
+// ==============
+// GLOBALS
+// ==============
 const navItems = [
   { label: 'Home', path: '/' },
   { label: 'Games', path: '/games' },
@@ -15,12 +20,10 @@ const navItems = [
   { label: 'Settings', path: '/settings' },
 ]
 
-
-/* COMPONENT: Header
-- Renders the header section of the application with the title and navigation links.
-*/
+// ==============
+// COMPONENT
+// ==============
 function Header() {
-
   const headerStyle = {
     width: '100%',
     borderBottom: '1px solid #002437',
@@ -35,7 +38,7 @@ function Header() {
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     gap: '0.75rem',
     textAlign: 'left',
   }
@@ -48,18 +51,12 @@ function Header() {
     margin: 0,
   }
 
-  const separatorStyle = {
-    color: '#000000',
-    fontWeight: 600,
-  }
-
   const navStyle = {
     display: 'flex',
     alignItems: 'center',
     gap: '0.75rem',
   }
 
-  /* Link Styles */
   const linkStyle = {
     color: '#0000007c',
     display: 'inline-flex',
@@ -71,7 +68,6 @@ function Header() {
     transition: 'background-color 0.2s ease, color 0.2s ease',
   }
 
-    /* Active Styles */
   const activeLinkStyle = {
     ...linkStyle,
     color: '#000000',
@@ -80,24 +76,17 @@ function Header() {
     boxShadow: '0 1px 2px rgba(15, 23, 42, 0.08)',
   }
 
-  /* Inactive Styles */
-  const inactiveLinkStyle = {
-    ...linkStyle,
-    color: '#0000007c',
-  }
-
   return (
     <header style={headerStyle}>
       <div style={containerStyle}>
         <span style={titleStyle}>SCOREPEDIA</span>
-        <span style={separatorStyle}>|</span>
         <nav style={navStyle}>
           {navItems.map((item) => (
             <NavLink
               key={item.label}
               to={item.path}
               style={({ isActive }) =>
-                isActive ? activeLinkStyle : inactiveLinkStyle
+                isActive ? activeLinkStyle : linkStyle
               }
             >
               {item.label}
